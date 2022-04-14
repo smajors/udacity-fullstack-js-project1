@@ -37,3 +37,26 @@ The placeholders 1, 2, and 3 are replaced with the following
 {3} - The width of the resized image. This must be non-negative, and not a zero. This must also be numeric with no alpha characters.
 
 When an image is not cached, it is resized and copied into the */projectroot/dist/assets/resized* folder. If the same image with the same dimensions is called up again, the cached copy of this file is retrieved and sent to the browser.
+
+#### Endpoint documentation
+
+**/imagemanip**
+Parameters:
+*filename*: Filename of the image in */projectroot/dist/assets/full*
+*width*: Width of the resized image in pixels. Cannot be non-numeric, 0, or negative.
+*height*: Height of the resized image in pixels. Cannot be non-numeric, 0, or negative
+
+Error messages:
+
+**Parameters are either not present or malformed. Correct paramters are filename=string, width=number, height=number**
+**Your parameters: filename=undefined width=undefined height=undefined**
+-- Incorrect parameters were given or parameters were not provided
+
+**width and height must be numeric.**
+You gave parameters for width or height which were non-numeric
+
+**Width and height cannot be a negative or zero value**
+You gave parameters for width or height that were either zero or negative.
+
+**File Not Found**
+The file you provided was not available to be resized. Make sure it is available in the */projectroot/dist/assets/full* directory.
