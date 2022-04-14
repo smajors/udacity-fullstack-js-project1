@@ -48,15 +48,15 @@ Parameters:
 
 Error messages:
 
-**Parameters are either not present or malformed. Correct paramters are filename=string, width=number, height=number**
-**Your parameters: filename=undefined width=undefined height=undefined**
+**Parameters are either not present or malformed. Correct paramters are filename=string, width=number, height=number**  
+**Your parameters: filename=undefined width=undefined height=undefined**  
 -- Incorrect parameters were given or parameters were not provided
 
-**width and height must be numeric.**
+**width and height must be numeric.**  
 You gave parameters for width or height which were non-numeric
 
-**Width and height cannot be a negative or zero value**
+**Width and height cannot be a negative or zero value**  
 You gave parameters for width or height that were either zero or negative.
 
-**File Not Found**
+**File Not Found**  
 The file you provided was not available to be resized. Make sure it is available in the */projectroot/dist/assets/full* directory.
