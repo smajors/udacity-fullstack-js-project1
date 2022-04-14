@@ -6,7 +6,7 @@ This is my work on the Udacity Full Stack Developer Course for Project 1. It's f
 
 #### Initializing the project
 
-Run the command **npm init** in the root of the project folder to initialize the npm project.
+Run the command **npm install** in the root of the project folder to initialize the npm project.
 
 #### Built in Scripts
 
