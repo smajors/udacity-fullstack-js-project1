@@ -56,7 +56,7 @@ imagemanip.get('/', (req, res) => {
         // Respond back with the resized image in an <img> tag
         const body =
           '<!DOCTYPE html><head><title>Image</title></head><body><img src="' +
-          '/assets/resized/' +
+          'assets/resized/' +
           path.basename(imgResponse.getPath()) +
           '"></body></html>';
         res.status(code).send(body);
