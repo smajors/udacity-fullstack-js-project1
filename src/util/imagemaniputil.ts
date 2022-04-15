@@ -4,8 +4,8 @@ import fsExists from 'fs.promises.exists';
 import path from 'path';
 import { ImageResponse } from '../class/ImageResponse';
 
-const fullSizedDir = path.resolve('./dist/assets/full');
-const resizedDir = path.resolve('./dist/assets/resized');
+const fullSizedDir = path.resolve('./assets/full');
+const resizedDir = path.resolve('./assets/resized');
 
 /**
  * Performs image resizing via the sharp library
@@ -50,6 +50,8 @@ async function getResizedImageAsync(
     resizedDir,
     path.parse(filename).name + '_' + width + 'x' + height + '.png'
   );
+  console.log('DEBUG!');
+  console.log({fullFileName: fullFileWithPath, resizedFileName: resizedFileNameWithPath});
   // If the file exists, return the cached file
   const cachedExists = await fsExists(resizedFileNameWithPath);
   if (cachedExists) {

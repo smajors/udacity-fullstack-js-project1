@@ -9,8 +9,8 @@ describe('Endpoint Testing Suite', () => {
   let filename: string;
   let width: string;
   let height: string;
-  const fullAssetFolder = path.resolve('./dist/assets/full');
-  const resizedAssetFolder = path.resolve('./dist/assets/resized');
+  const fullAssetFolder = path.resolve('./assets/full');
+  const resizedAssetFolder = path.resolve('./assets/resized');
   const testFileName = path.resolve(
     './src/assets/full/WikimediaCommonsArcticFox.jpg'
   );
@@ -19,6 +19,7 @@ describe('Endpoint Testing Suite', () => {
       await fsPromise.copyFile(
         testFileName,
         fullAssetFolder + '/WikimediaCommonsArcticFox.jpg'
+
       );
     });
     beforeEach(() => {

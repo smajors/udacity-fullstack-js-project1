@@ -5,8 +5,8 @@ import getResizedImageAsync from '../../util/imagemaniputil';
 import { ImageResponse } from '../../class/ImageResponse';
 
 describe('Image Manipulation Tests', () => {
-  const fullAssetFolder = path.resolve('./dist/assets/full');
-  const resizedAssetFolder = path.resolve('./dist/assets/resized');
+  const fullAssetFolder = path.resolve('./assets/full');
+  const resizedAssetFolder = path.resolve('./assets/resized');
   const testFileName = path.resolve(
     './src/assets/full/WikimediaCommonsArcticFox.jpg'
   );

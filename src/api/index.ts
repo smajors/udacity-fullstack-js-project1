@@ -4,7 +4,7 @@ import imagemanip from './imagemanip/imagemanip';
 const routes = express.Router();
 
 // Default route. Returns a 403 Forbidden error for now
-routes.get('/', (req, res) => {
+routes.get('/', (req: express.Request, res: express.Response) => {
   res.status(403).send('FORBIDDEN');
 });
 
