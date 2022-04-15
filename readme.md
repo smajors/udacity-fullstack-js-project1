@@ -23,7 +23,7 @@ The following scripts are available to run with the command **npm run** ***scrip
 
 #### How to use the project
 
-The very first thing is to create the folder structure for the assets. In */projectroot/dist/assets/full*, where *projectroot* is the root of the project on your filesystem, create the *assets* folder. Inside this folder, create two folders: *full* and *resized*.
+*Note: **npm run test** will create the needed folder structure in /projectroot/assets/. You should run the tests before running the application.*
 
 The bare minimum to start the project is to run **npm run buildandrun** to start the application and have it be ready for input.
 
