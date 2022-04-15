@@ -16,10 +16,12 @@ describe('Endpoint Testing Suite', () => {
   );
   describe('Endpoint Status Code Responses', () => {
     beforeAll(async () => {
+      // First check for the existence of an assets directory. If not, create it and its subdirectories
+      await fsPromise.mkdir(fullAssetFolder, { recursive: true });
+      await fsPromise.mkdir(resizedAssetFolder, { recursive: true });
       await fsPromise.copyFile(
         testFileName,
         fullAssetFolder + '/WikimediaCommonsArcticFox.jpg'
-
       );
     });
     beforeEach(() => {

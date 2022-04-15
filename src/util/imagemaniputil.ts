@@ -51,7 +51,10 @@ async function getResizedImageAsync(
     path.parse(filename).name + '_' + width + 'x' + height + '.png'
   );
   console.log('DEBUG!');
-  console.log({fullFileName: fullFileWithPath, resizedFileName: resizedFileNameWithPath});
+  console.log({
+    fullFileName: fullFileWithPath,
+    resizedFileName: resizedFileNameWithPath,
+  });
   // If the file exists, return the cached file
   const cachedExists = await fsExists(resizedFileNameWithPath);
   if (cachedExists) {
