@@ -63,7 +63,11 @@ imagemanip.get('/', (req: express.Request, res: express.Response) => {
       })
       .catch(() => {
         // Catch any uncaught exceptions
-        res.status(400).send('File not found.');
+        res
+          .status(400)
+          .send(
+            'File not found. Make sure you are specifying the filename and the extension (e.g. filename.jpg and not filename), and not adding any paths to the filename.'
+          );
       });
   }
 });
