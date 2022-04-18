@@ -4,7 +4,7 @@ import path from 'path';
 
 const imagemanip = express.Router();
 
-imagemanip.get('/', (req, res) => {
+imagemanip.get('/', (req: express.Request, res: express.Response) => {
   // Check to see that all route parameters are present
   const params = req.query;
   const filename =
